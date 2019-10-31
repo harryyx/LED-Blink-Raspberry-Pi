@@ -9,13 +9,13 @@ try:
         if button_state == True:
             GPIO.output(24, True)
             print('Button Pressed...')
-            time.sleep(0.2)
+            time.sleep(0.5)
         else:
             GPIO.output(24, True)
             time.sleep(0.5)
             print('LED Blinking...')
             GPIO.output(24, False)
-            time.sleep(0.5)
+            time.sleep(0.9)
 
 except:
     GPIO.cleanup()
