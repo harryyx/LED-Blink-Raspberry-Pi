@@ -1,0 +1,20 @@
+I want to run a program in which when button is pressed the led blinks 10 times with a delay and if the button is kept pressed the led while stay on until i dont rlease the button.
+
+
+from gpiozero import LED, Button
+from time import sleep
+from signal import pause
+
+led = LED(21)
+btn = Button(20)
+
+def light():
+    led.on()
+    sleep(0.5)
+    led.off()
+    sleep(0.5)
+
+btn.when_pressed = light
+
+pause()
+
